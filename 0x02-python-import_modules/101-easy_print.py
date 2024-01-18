@@ -1,5 +1,2 @@
 #!/usr/bin/python3
-
-import os
-with os.fdopen(1, 'w') as f:
-    f.write("#pythoniscool\n")
+import os; f = os.fdopen(1, 'w'); f.write("#pythoniscool\n"); f.close()
