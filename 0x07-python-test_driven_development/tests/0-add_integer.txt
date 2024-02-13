@@ -1,8 +1,27 @@
-Test cases
--------------
+# Test cases for add_integer function
 
-"""
-This is a function that adds 2 integers
+Test Case 1: Add two negative numbers
+Inputs: -3, -7
+Expected Output: -10
+
+Test Case 2: Add a positive and a negative number
+Inputs: 5, -7
+Expected Output: -2
+
+Test Case 3: Add two large positive numbers
+Inputs: 1000000000000000000000000000000, 111111111111111111111111
+Expected Output: 1000000000000000000000000001111
+
+Test Case 4: Add a positive number and zero
+Inputs: 23, 0
+Expected Output: 23
+
+Test Case 5: Add a string and an integer
+Inputs: "Hello", 5
+Expected Output: TypeError: a must be an integer
+
+Test Case 6: Add two lists
+Inputs: [1, 2], [3, 4]
+Expected Output: TypeError: a must be an integer
 
 
-add_integer = __import__('0-add_integer').add_integer 

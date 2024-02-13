@@ -3,10 +3,7 @@
 
 
 def add_integer(a=56, b=98):
-    """Returns the addition of two numbers
-
-    Arguments:
-        a: 
+    """Returns the addition of two number 
     raises:
         TypeError if a and b is not float or int 
     """

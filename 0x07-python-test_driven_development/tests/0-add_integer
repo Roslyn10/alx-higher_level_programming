@@ -1,0 +1,66 @@
+Test cases
+-------------
+
+
+This is a function that adds 2 integers
+
+
+add_integer = __import__('0-add_integer').add_integer
+
+
+The function works with a negative number and positve number
+
+>>> add_integer(-3, 7)
+4
+
+Works with a larger negative number and a larger positive number
+
+>>> add_integer(1000000000000000000000000000000, -111111111111111111111111)
+999999888888888888888888888889
+
+Works with two negative numbers
+
+>>> add_integer(-3433, -900)
+-3523
+
+Works with a zero
+
+>>> add_integer(23, 0)
+23
+
+Doesnt work with strings
+
+>>> add_integer("Hello World!")
+Typeerror: b must be an integer
+
+Doesnt work with 2 lists
+
+>>> add_integer([1, 2], [8, 9])
+TypeError: a must be an integer
+
+Doesnt work with 1 list
+
+>>> add_integer([1, 2]
+TypeError: a must be an integer
+
+
+Doesnt work with more than 2 inputs
+
+>>> add_integer(78, 98, 7282)
+TypeError: add_integer() takes from 0 to 2 positional arguments but 3 were given
+
+Doesnt work with an int and string
+
+>>> add_integer(89, "Bye")
+TypeError: b must be an integer
+
+Works with two large positive integers
+
+>>> add_integer(98468227635672386578237806869649, 29474927482647829429467279472894678236478678536578936275623890748923647862378460782364782)
+29474927482647829429467279472894678236478678536578936275722358976559320248956698589234431
+
+
+The function also works with floating-point values
+
+>>> add_integer(2.0, 3.0)
+5
