@@ -4,14 +4,14 @@
 
 def print_square(size):
     """
-    Returns a square made from the # character 
+    Returns a square made from the # character
 
     Arguments:
         size (int): height and width of the square
-    
+
     Raises:
         TypeError: If size is a float and not an int
-        ValueError: If size is less than 0 
+        ValueError: If size is less than 0
     """
 
     if type(size) is not int:
