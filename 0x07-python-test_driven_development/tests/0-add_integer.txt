@@ -1,7 +1,7 @@
-The ``0-add_integer`` module
+add_integer
 ======================
 
-Using ``add_integer``
+Using the function
 -------------------
 
 Importing the function from the module:
