@@ -12,7 +12,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_empty_list(self):
         """Test an empty list"""
         empty_list = []
-        self.assertEqual(max_integer(empty), None)
+        self.assertEqual(max_integer(empty_list), None)
 
     def test_two_numbers(self):
         """Tests if there are 2 of the same large number"""
@@ -70,7 +70,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer(ordered), 11)
 
     def test_unordered(self):
-        """Tests  for unordered lists"""
+        """Test  for unordered lists"""
         unordered = [8, 6, 2, 10, 290]
         self.assertEqual(max_integer(unordered), 290)
 
