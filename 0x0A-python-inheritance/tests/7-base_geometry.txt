@@ -17,20 +17,19 @@ Write a class BaseGeometry (based on 6-base_geometry.py).
     * If value is less or equal to 0: raises a ValueError exception
 
 
-Section // No exceptions
 =========================
 
 Test case #0: A test case with good parameters
-    
+
     >>> bg.integer_validator("my_int", 12)
 
-
+=================================
 Test case #1: A test case with good parameters
 
     >>> bg.integer_validator("width", 89)
 
 
-Section // Type Errors
+
 =========================
 
 Test case #2: A test case with a not integer value
@@ -41,7 +40,8 @@ Test case #2: A test case with a not integer value
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] name must be an integer
 
-Test case #3: A test case with a infinite float value
+=====================================
+Test case #3: Infinite float value
 
     >>> try:
     ...     bg.integer_validator("inf_float", 1e400)
@@ -49,7 +49,8 @@ Test case #3: A test case with a infinite float value
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] inf_float must be an integer
 
-Test case #4: A test case with a NaN value
+==============================
+Test case #4: NaN value
 
     >>> try:
     ...     bg.integer_validator("nan", float('nan'))
@@ -57,7 +58,8 @@ Test case #4: A test case with a NaN value
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] nan must be an integer
 
-Test case #5: A test case with a boolean value
+===============================
+Test case #5: Boolean value
 
     >>> try:
     ...     bg.integer_validator("name", True)
@@ -65,7 +67,8 @@ Test case #5: A test case with a boolean value
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] name must be an integer
 
-Test case #6: A test case with a tuple value
+=========================
+Test case #6: Tuple value
 
     >>> try:
     ...     bg.integer_validator("name", (4, ))
@@ -73,7 +76,8 @@ Test case #6: A test case with a tuple value
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] name must be an integer
 
-Test case #7: A test case with a string value
+===========================
+Test case #7: String value
 
     >>> try:
     ...     bg.integer_validator("name", 'Monty Python')
@@ -81,7 +85,8 @@ Test case #7: A test case with a string value
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] name must be an integer
 
-Test case #8: A test case with a none value
+============================
+Test case #8: None value
 
     >>> try:
     ...     bg.integer_validator("name", None)
@@ -89,7 +94,8 @@ Test case #8: A test case with a none value
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] name must be an integer
 
-Test case #9: A test case with a list value
+========================
+Test case #9: List value
 
     >>> try:
     ...     bg.integer_validator("name", [])
@@ -97,7 +103,8 @@ Test case #9: A test case with a list value
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] name must be an integer
 
-Test case #10: A test case with a dictionary value
+=========================
+Test case #10: Dictionary value
 
     >>> try:
     ...     bg.integer_validator("name", {3, 4})
@@ -105,6 +112,7 @@ Test case #10: A test case with a dictionary value
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] name must be an integer
 
+==========================
 Test case #11: A test case with a class value
 
     >>> try:
@@ -113,6 +121,7 @@ Test case #11: A test case with a class value
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] name must be an integer
 
+======================
 Test case #12: A test case without value
 
     >>> try:
@@ -121,6 +130,8 @@ Test case #12: A test case without value
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] integer_validator() missing 1 required positional argument: 'value'
 
+
+====================
 Test case #13: A test case without value
 
     >>> try:
@@ -130,10 +141,9 @@ Test case #13: A test case without value
     [TypeError] integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 
-Section // Value Errors
 =========================
 
-Test case #14: A test case with zero as value
+Test case #14: Zero as value
 
     >>> try:
     ...     bg.integer_validator("age", 0)
@@ -150,7 +160,6 @@ Test case #15: A test case with a value less than zero
     [ValueError] distance must be greater than 0
 
 
-Section // General Errors
 =========================
 
 Test case #16: A test case with a not available method
