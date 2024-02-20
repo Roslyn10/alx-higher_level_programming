@@ -4,7 +4,8 @@
 
 def inherits_from(obj, a_class):
     """
-    Returns True if the object is an instance of a class that inherited from a specified class, otherwise False
+    Returns True if the object is an instance of a class that inherited
+    from a specified class, otherwise False
 
     Arguments:
         obj: An object that is a specific class
@@ -12,7 +13,7 @@ def inherits_from(obj, a_class):
 
     Returns:
         True: if the object matches the class
-        False: If otherwise 
+        False: If otherwise
     """
 
     if issubclass(type(obj), a_class) and type(obj) != a_class:
