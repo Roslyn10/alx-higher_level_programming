@@ -35,35 +35,18 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """Assigns an argument to each attribute"""
-        if args and len(args) != 0:
-        for i in range(len(args)):
-            if i == 0:
-                if args[i] is None:
-                    self.__init__(self.width, self.width, self.x, self.y)
-                else:
-                    self.id = args[i]
-            if i == 1:
-                self.width = args[i]
-                self.height = args[i]
-            if i == 2:
-                self.x = args[i]
-            if i == 3:
-                self.y = args[i]
-    else:
-        if kwargs and len(kwargs) != 0:
-            for key, value in kwargs.items():
-                if key == "id":
-                    if value is None:
-                        self.__init__(self.width, self.width, self.x, self.y)
-                    else:
-                        self.id = value
-                elif key == "size":
-                    self.width = value
-                    self.height = value
-                elif key == "x":
-                    self.x = value
-                elif key == "y":
-                    self.y = value
+            if args:
+        if len(args) > 0:
+            self.id = args[0]
+        if len(args) > 1:
+            self.size = args[1]
+        if len(args) > 2:
+            self.x = args[2]
+        if len(args) > 3:
+            self.y = args[3]
+
+    for key, value in kwargs.items():
+        setattr(self, key, value)
 
     def to_dictionary(self):
         """Returns the dictionary representation of a square"""
