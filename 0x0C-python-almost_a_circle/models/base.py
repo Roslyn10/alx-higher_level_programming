@@ -65,7 +65,7 @@ class Base:
             list: A list of dictionaries
         """
         if json_string is None or json_string == "":
-            return "[]"
+            return []
         return json.loads(json_string)
 
     @classmethod
