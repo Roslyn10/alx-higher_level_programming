@@ -86,3 +86,7 @@ class Rectangle(Base):
     def y(self, value):
         """y setter"""
         self.__y = value
+
+    def area(self):
+        """Area of the rectangle"""
+        return self.width * self.height
