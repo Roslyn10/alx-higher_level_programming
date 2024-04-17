@@ -3,8 +3,8 @@
 -- should display the score and the name
 -- should be listed by descending score
 -- mysql will be passed as an argument
-SELECT score, COUNT('score') as number
-WITH naame
+SELECT score, name
 FROM second_table
-GROUP BY score
+WHERE name IS NOT NULL
+GROUP BY score, name
 ORDER BY score DESC;
