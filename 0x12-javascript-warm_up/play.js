@@ -1,21 +1,16 @@
 #!/usr/bin/node
-
-// Check if arguments are provided
-if (process.argv.length === 2) {
-  // No arguments provided
-  console.log("undefined is undefined");
-} else if (process.argv.length === 3) {
-  // One argument provided
-  const arg1 = process.argv[2];
-  console.log(`${arg1} is undefined`);
-} else if (process.argv.length === 4) {
-  // Two arguments provided
-  const arg1 = process.argv[2];
-  const arg2 = process.argv[3];
-  console.log(`${arg1} is ${arg2}`);
-} else {
-  // More than two arguments provided
-  console.log("Usage: node script.js <arg1> <arg2>");
-  process.exit(1); // Exit with error code 1
+function add (a, b) {
+  if (process.argv[2] !== undefined && process.argv[3] !== undefined) {
+    const arg1 = parseInt(process.argv[2]);
+    const arg2 = parseInt(process.argv[3]);
+    if (!isNaN(arg1) && !isNaN(arg2)) {
+      return arg1 + arg2;
+    } else {
+      console.log('NaN');
+      return null;
+    }
+  } else {
+    return NaN;
+  }
 }
-
+console.log(add());
