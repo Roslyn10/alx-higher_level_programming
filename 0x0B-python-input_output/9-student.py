@@ -4,7 +4,7 @@
 
 class Student:
     """
-    Attributes 
+    Attributes
     first_name(str): first name of the student
     last_name(str): last name of the student
     age(int): age of the student
