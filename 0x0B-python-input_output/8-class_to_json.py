@@ -6,6 +6,9 @@ import json
 
 
 def class_to_json(obj):
-    """Returns the dic description with simple data structure for JSON"""
+    """
+    Returns the dictionary description with simple data structure for JSON
+    (list, dictionary, string, integer and boolean
+    """
 
-
+    return obj.__dict__
