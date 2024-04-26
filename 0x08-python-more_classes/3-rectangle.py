@@ -10,7 +10,7 @@ class Rectangle:
         Represents a rectangle shape
 
         width(int): the width of the rectangle
-            
+
             Raises:
                 TypeError: if width is not an int
                 ValueError: if width is less than 0
@@ -21,7 +21,7 @@ class Rectangle:
                 TypeError: if height is not an int
                 ValueError: if height is less than 0
         """
-        
+
         self.width = width
         self.height = height
 
@@ -29,7 +29,7 @@ class Rectangle:
     def width(self):
         """The width of the rectangle"""
         return self.__width
-        
+
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
@@ -57,7 +57,7 @@ class Rectangle:
 
     def perimeter(self):
         """returns the perimeter of the rectangle"""
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.width + self.height)
 
@@ -65,10 +65,10 @@ class Rectangle:
         """allows the rectangle to be displayed using #"""
         if self.__width == 0 or self.__height == 0:
             return ("")
-        
-        rect = []
-        for i in range(self.__height):
-            [rect.append('#') for j in range(self.__width)]
-            if i != self.__height - 1:
-                rect.append("\n")
-            return ("".join(rect))
+
+        rec = []
+        for m in range(self.__height):
+            [rec.append('#') for n in range(self.__width)]
+            if m != self.__height - 1:
+                rec.append("\n")
+        return ("".join(rec))
