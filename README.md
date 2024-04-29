@@ -23,3 +23,4 @@ PYTHON
 * 0x0D-SQL_introduction
 * 0x12-javascript-warm_up
 * 0x13-javascript_objects_scopes_closures
+* 0x0F-python-object_relational_mapping
