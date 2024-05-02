@@ -21,12 +21,12 @@ if __name__ == '__main__':
 
     cursor = db.cursor()
 
-    cursor.execute("
+    cursor.execute("""
             SELECT *
             FROM states
             WHERE state_name LIKE 'N%'
             ORDER BY states.id ASC
-            ")
+            """)
 
     data = cursor.fetchall()
 
