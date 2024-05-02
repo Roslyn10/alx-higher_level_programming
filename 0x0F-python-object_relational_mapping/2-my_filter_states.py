@@ -25,9 +25,9 @@ if __name__ == '__main__':
 
     query = """SELECT * FROM states
             WHERE name = %s
-            ORDER BY id ASC"""
+            ORDER BY id ASC""".format(sys.argv[4])
 
-    cursor.execute(query, (sys.argv[4],))
+    cursor.execute(query)
 
     data = cursor.fetchall()
 
@@ -35,4 +35,4 @@ if __name__ == '__main__':
         print(row)
 
     cursor.close()
-    db.close
+    db.close()
