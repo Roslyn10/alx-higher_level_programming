@@ -18,7 +18,7 @@ if __name__ == 'main__':
                          host='localhost',
                          port=3306)
 
-    cursos = db.cursor()
+    cursor = db.cursor()
 
     cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
 
