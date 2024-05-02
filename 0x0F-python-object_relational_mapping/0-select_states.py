@@ -20,7 +20,7 @@ if __name__ == 'main__':
 
     cursos = db.cursor()
 
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
 
     data = cursor.fetchall()
 
