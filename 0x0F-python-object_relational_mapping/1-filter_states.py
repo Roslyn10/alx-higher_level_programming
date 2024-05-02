@@ -2,7 +2,7 @@
 
 """
     Lists all states with a name starting with N from
-    the datatbase hbtn_0e_0_usa
+    the database hbtn_0e_0_usa
     Arguments:
         mysql username
         mysql password
@@ -19,7 +19,7 @@ if __name__ == '__main__':
                          host='localhost',
                          port=3306)
 
-    cursor = conn.cursor()
+    cursor = db.cursor()
 
     query = """
             SELECT *
@@ -35,4 +35,4 @@ if __name__ == '__main__':
         print(state)
 
     cursor.close()
-    db.st close()
+    db.close()
