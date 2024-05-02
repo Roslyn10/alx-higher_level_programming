@@ -12,7 +12,7 @@
 import sys
 import MySQLdb
 
-if __name__ == 'main__':
+if __name__ == '__main__':
     db = MySQLdb.connect(user=sys.argv[1],
                          passwd=sys.argv[2],
                          db=sys.argv[3],
@@ -21,7 +21,7 @@ if __name__ == 'main__':
 
     cursor = conn.cursor()
 
-    query = "SELECT * FROM WHERE state_name LIKE 'N%' ORDER BY states.id ASC")
+    query = "SELECT * FROM states WHERE state_name LIKE 'N%' ORDER BY states.id ASC"
     cursor.execute(query)
 
     states = cursor.fetchall()
@@ -30,4 +30,4 @@ if __name__ == 'main__':
         print(state)
 
     cursor.close()
-    conn.close()
+    db.close()
