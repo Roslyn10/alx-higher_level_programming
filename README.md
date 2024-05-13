@@ -25,3 +25,4 @@ PYTHON
 * 0x13-javascript_objects_scopes_closures
 * 0x0E-SQL_more_queries
 * 0x0F-python-object_relational_mapping
+* 0x11-python-network_1
