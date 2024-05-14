@@ -72,7 +72,7 @@ class Rectangle:
 
         rec = []
         for m in range(self.__height):
-            rec.append(str(self.print_symbol) * self.width)  
+            rec.append(str(self.print_symbol) * self.width)
             rec.append("\n")
         return ("".join(rec)).rstrip()
 
