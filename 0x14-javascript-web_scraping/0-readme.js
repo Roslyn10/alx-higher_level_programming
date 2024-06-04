@@ -1,24 +1,18 @@
 #!/usr/bin/node
+const fs = require('fs');
 
-const fs = require('fs').promises;
-const path = require('path');
-
-const filePath = process.argv[2];
-
-if (!filePath) {
-  console.error('Please provide a file path as the first argument.');
-  process.exit(1);
+process.argv[0] = 'node';
+function readFile (filePath) {
+  fs.readFile(filePath, 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    console.log(data);
+  });
 }
 
-const absolutePath = path.resolve(filePath);
-
-async function readFileContent (file) {
-  try {
-    const content = await fs.readFile(file, 'utf-8');
-    console.log(content);
-  } catch (error) {
-    console.error('Error reading file:', error);
-  }
+if (process.argv.length === 3) {
+  const filePath = process.argv[2];
+  readFile(filePath);
 }
-
-readFileContent(absolutePath);
