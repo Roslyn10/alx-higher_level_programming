@@ -1,4 +1,4 @@
---Converts hbtn_0c_0 database to UTF8
+-- Converts hbtn_0c_0 database to UTF8
 
 USE hbtn_0c_0
 ALTER DATABASE hbtn_0c_0
