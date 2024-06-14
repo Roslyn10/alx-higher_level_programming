@@ -3,6 +3,7 @@
 
 
 def find_peak(list_of_integers):
+    """Checks the peak of a list"""
     if not list_of_integers:
         return None
     list_of_integers.sort()
