@@ -1,8 +1,8 @@
--- Displays the average tempreture by city
--- ordered by tempreature
+-- Displays the average temperature by city
+-- ordered by temperature
 
-USE tempreature
+USE temperature;
 SELECT city, AVG(value) as avg_temp
-FROM tempreatures
+FROM temperatures
 GROUP BY city
 ORDER BY avg_temp DESC;
