@@ -55,6 +55,26 @@ Combining integers and floats:
     >>> matrix_divided(matrix, 3)
     [[0.33, -0.73, 1.0, 1.47, 1.67], [-2.2, 2.33, 2.67, 3.33, 3.33]]
 
+Uneven number of values in rows:
+   >>> matrix = [
+   ...     [3, 6, 9],
+   ...     [12, 15, 18, 20]
+   ... ]
+   >>> matrix_divided(matrix, 3)
+   Traceback (most recent call last):
+   ...
+   TypeError: Each row of the matrix must have the same size
+
+Not Matrix:
+    >>> matrix = [
+    ...     ["3", 4, 5],
+    ...     [8, 0, 12],
+    ... ]
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
 Invalid Divisors:
 =================
 
@@ -80,3 +100,12 @@ Divisor is zero:
     ...
     ZeroDivisionError: division by zero
 
+Div not an int:
+    >>> matrix = [
+    ...     [4, 5, 6],
+    ...     [90, 23, 56],
+    ... ]
+    >>> matrix_divided(matrix, "3")
+    Traceback (most recent call last):
+    ....
+    TypreError: div must be a number

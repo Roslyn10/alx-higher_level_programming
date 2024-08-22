@@ -1,0 +1,53 @@
+How to Use 2-matrix_divided.py
+==============================
+
+This module defines a matrix division function ``matrix_divided(matrix, div)``.
+
+Using the Function
+===================
+
+Importing the function from the module:
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Checking for module docstring:
+    >>> m = __import__("2-matrix_divided").__doc__
+    >>> len(m) > 1
+    True
+
+Checking for function docstring:
+    >>> f = __import__("2-matrix_divided").matrix_divided.__doc__
+    >>> len(f) > 1
+    True
+
+Uneven number of values in rows:
+   >>> matrix = [
+   ...     [3, 6, 9],
+   ...     [12, 15, 18, 20]
+   ...]
+   >>> matrix_divided(matrix, 3)
+   Traceback (most recent call last):
+   ...
+   TypeError: Each row of the matrix must have the same size   
+
+
+Not Matrix:
+    >>> matrix = [
+    ...     ["3", 4, 5],
+    ...     [8. 0, 12],
+    ... ]
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+Div not an int:
+    >>> matrix = [
+    ...     [4, 5, 6],
+    ...     [90, 23, 56],
+    ... ]
+    >>> matrix_divided(matrix, "3")
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+
