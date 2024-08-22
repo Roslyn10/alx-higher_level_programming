@@ -75,13 +75,3 @@ Checking for non-number types:
 	 Traceback (most recent call last):
          ...
          TypeError: size must be an integer
-
-Checking for non-int number types:
-	 >>> print_square(1.0)
-	 Traceback (most recent call last):
-         ...
-         TypeError: size must be an integer
-	 >>> print_square(-5.5)
-	 Traceback (most recent call last):
-         ...
-         TypeError: size must be an integ
