@@ -85,7 +85,6 @@ Not a list of lists:
     ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-
 Invalid Divisors:
 =================
 
@@ -142,3 +141,6 @@ Missing 2 argument:
     ...
     TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
 
+Division by infinity:
+    >>> matrix_divided(matrix, float('inf'))
+    >>>
