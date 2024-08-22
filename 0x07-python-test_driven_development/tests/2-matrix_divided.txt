@@ -85,6 +85,7 @@ Not a list of lists:
     ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
+
 Invalid Divisors:
 =================
 
