@@ -75,6 +75,16 @@ Not Matrix:
     ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
+Not a list of lists:
+    >>> matrix = [
+    ...     [1, 4, 5],
+    ...     "not a list"
+    ... ]
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
 Invalid Divisors:
 =================
 
@@ -108,4 +118,26 @@ Div not an int:
     >>> matrix_divided(matrix, "3")
     Traceback (most recent call last):
     ....
-    TypreError: div must be a number
+    TypeError: div must be a number
+
+Missing one argument:
+    >>> matrix = [
+    ...     [88, 23, 90],
+    ...     [45, 78, 23],
+    ... ]
+    >>> matrix_divided(matrix)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+
+Missing 2 argument:
+    >>> matrix = [
+    ...     [89, 478, 329],
+    ...     [478, 437, 289],
+    ... ]
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
