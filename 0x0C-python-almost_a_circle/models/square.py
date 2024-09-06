@@ -12,11 +12,11 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        """String representation of a square"""
-        return (
-            f"[Square] ({self.id}){self.x}/{self.y} - "
-            f"{self.width}"
-        )
+    """String representation of a square"""
+    return (
+        f"[Square] ({self.id}) {self.x}/{self.y} - "
+        f"{self.width}"
+    )
 
     @property
     def size(self):
