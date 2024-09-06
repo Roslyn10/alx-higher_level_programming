@@ -476,6 +476,43 @@ class TestSquare_update_kwargs(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             s.update(y=-5)
 
+class TestSquareStr(unittest.TestCase):
+    """Unittests for testing the __str__ method of Square class."""
+
+    def test_str_no_x_y(self):
+        s = Square(5)
+        expected_output = "[Square] ({}) 0/0 - 5".format(s.id)
+        self.assertEqual(str(s), expected_output)
+
+    def test_str_with_x(self):
+        s = Square(4, 3)
+        expected_output = "[Square] ({}) 3/0 - 4".format(s.id)
+        self.assertEqual(str(s), expected_output)
+
+    def test_str_with_x_y(self):
+        s = Square(7, 2, 5)
+        expected_output = "[Square] ({}) 2/5 - 7".format(s.id)
+        self.assertEqual(str(s), expected_output)
+
+    def test_str_with_all_attributes(self):
+        s = Square(8, 4, 3, 10)
+        expected_output = "[Square] (10) 4/3 - 8"
+        self.assertEqual(str(s), expected_output)
+
+    def test_str_after_changes(self):
+        s = Square(6, 2, 3, 7)
+        s.size = 10
+        s.x = 5
+        s.y = 7
+        expected_output = "[Square] (7) 5/7 - 10"
+        self.assertEqual(str(s), expected_output)
+
+    def test_str_invalid_argument(self):
+        s = Square(5)
+        with self.assertRaises(TypeError):
+            s.__str__(1)
+
+
 class TestSquare_to_dictionary(unittest.TestCase):
     """Unittests for testing to_dictionary method of the Square class."""
 
